@@ -1,0 +1,37 @@
+.services {
+  padding: 50px 0;
+  background-color: #f6f7fb;
+  .container {
+    justify-items: center;
+    @extend %container-drid-display;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 0;
+    .box {
+      text-align: center;
+      i {
+        font-size: 20px;
+        color: #646464;
+        cursor: pointer;
+        transition: $main-transition;
+        &:hover {
+          color: $main-color;
+        }
+      }
+      i.rotate {
+        transform: rotate(-45deg);
+      }
+      i.rotate-flib {
+        transform: rotate(45deg);
+      }
+      h4 {
+        margin: 0;
+        padding: 5px 0;
+        color: $alt-color;
+      }
+      p {
+        color: #999999cf;
+      }
+    }
+  }
+}
+// }

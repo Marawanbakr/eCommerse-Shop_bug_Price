@@ -1,0 +1,51 @@
+/* Start Small Banner */
+.samll-banner {
+  @include main-padding;
+  padding-bottom: 0px;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(460px, 1fr));
+  justify-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  .section {
+    position: relative;
+    img {
+      max-width: 100%;
+    }
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(10%, -50%);
+      p {
+        color: $main-color;
+        font-weight: bold;
+      }
+      h3 {
+        color: $alt-color;
+      }
+      a {
+        position: relative;
+        color: $alt-color;
+        transition: $main-transition;
+        &::before {
+          position: absolute;
+          content: '';
+          width: 100%;
+          transition: $main-transition;
+          height: 2px;
+          bottom: -5px;
+          background-color: $alt-color;
+        }
+        &:hover {
+          color: $main-color;
+          &::before {
+            background-color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}
+/* End Small Banner */

@@ -1,0 +1,75 @@
+@mixin main-padding {
+  position: relative;
+  padding: {
+    bottom: $min-card-padding;
+    top: $min-card-padding;
+  }
+}
+@mixin main-title {
+  position: relative;
+  margin: 0 auto 30px;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: fit-content;
+  z-index: 1;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    margin: auto;
+    height: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3px;
+    background-color: $main-color;
+  }
+}
+@mixin fixed-button {
+  position: fixed;
+  transition: $main-transition;
+  top: 37%;
+  right: 0px;
+  transform: translateY(-37%);
+  z-index: 99;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  background-color: #f79427;
+  box-shadow: -6px 0px 6px 0px #6e6e6e57;
+  a {
+    color: white;
+  }
+  ul {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    left: 80px;
+    width: 290px;
+    padding: 15px 30px;
+    text-align: start;
+
+    li {
+      padding: 10px 0;
+    }
+    .btn {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 7px 0;
+      button {
+        transition: $main-transition;
+        border: none;
+        outline: none;
+        padding: 15px 10px;
+        width: 100%;
+        border-radius: 40px;
+        background-color: $alt-color;
+        color: white;
+        cursor: pointer;
+        &:hover {
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+}

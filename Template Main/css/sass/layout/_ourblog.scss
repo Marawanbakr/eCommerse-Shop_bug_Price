@@ -1,0 +1,36 @@
+.ourblog {
+  @include main-padding;
+  h2.main-title {
+    @include main-title;
+  }
+  .container {
+    @extend %container-drid-display;
+    .box {
+      position: relative;
+      .img {
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .date {
+          color: #999999cf;
+        }
+        h3 {
+          margin: 0;
+          cursor: pointer;
+          transition: $main-transition;
+          &:hover {
+            color: $main-color;
+          }
+        }
+        p {
+        }
+      }
+    }
+  }
+}

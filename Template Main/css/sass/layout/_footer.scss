@@ -1,0 +1,54 @@
+.footer {
+  @include main-padding;
+  background-color: #222222;
+  > .container {
+    @extend %container-drid-display;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    @media (max-width: 500px) {
+      text-align: center;
+    }
+    .animation {
+      p {
+        transition: all 0.4s ease;
+        position: relative;
+
+        &:hover {
+          padding-left: 10px;
+          color: $main-color;
+        }
+      }
+    }
+    .box {
+      color: white;
+      .img {
+        img {
+        }
+        color: white;
+      }
+      .number {
+        span {
+          color: $main-color;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  .copyright {
+    .container {
+      .card {
+        @media (max-width: 677px) {
+          justify-content: space-around;
+        }
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        p {
+          color: white;
+        }
+      }
+    }
+  }
+}

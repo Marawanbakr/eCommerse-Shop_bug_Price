@@ -1,0 +1,45 @@
+.pig-title {
+  background-color: $main-color;
+  @include main-padding;
+  .container {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      margin: 0;
+    }
+    h1 {
+      position: relative;
+      &::before {
+        content: '';
+        position: absolute;
+        font-size: 40px;
+        width: 50px;
+        height: 2px;
+        bottom: -15px;
+        left: 50%;
+        background-color: white;
+        transform: translateX(-50%);
+      }
+    }
+    p {
+      margin: 15px 0 40px;
+      line-height: 1.7;
+    }
+    button {
+      padding: 20px 30px;
+      outline: none;
+      border: 0;
+      background-color: white;
+      cursor: pointer;
+      transition: $main-transition;
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+}

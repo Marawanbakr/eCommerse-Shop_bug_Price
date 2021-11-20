@@ -1,0 +1,54 @@
+.input-felid {
+  padding: 50px 0;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      color: $alt-color;
+      margin: 0;
+    }
+    p {
+      color: #999999cf;
+    }
+    .input {
+      input {
+        @media (max-width: 560px) {
+          width: 250px;
+        }
+        outline: none;
+        border-radius: 15%;
+        position: relative;
+        display: inline-block;
+        width: 380px;
+        height: 55px;
+        padding: 0 30px;
+        display: inline-block;
+        text-shadow: none;
+        box-shadow: none;
+        border: 1px solid #ccc;
+        border-radius: 30px 0 0 30px;
+      }
+      button {
+        display: inline-block;
+        height: 55px;
+        position: relative;
+        padding: 10px 30px;
+        top: 0;
+        background-color: #f79427;
+        color: white;
+        left: -4px;
+        border-radius: 0 30px 30px 0;
+        font-weight: 500;
+        text-transform: uppercase;
+        outline: none;
+        border: none;
+        transition: $main-transition;
+        cursor: pointer;
+        &:hover {
+          background-color: $alt-color;
+        }
+      }
+    }
+  }
+}

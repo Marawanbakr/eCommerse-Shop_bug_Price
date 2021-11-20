@@ -1,0 +1,59 @@
+/*  Start Global Rules */
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+body {
+  font-family: 'Cairo', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.left-fixed {
+  @include fixed-button;
+}
+.left-fixed-active {
+  right: 290px;
+}
+.active {
+  position: relative;
+  display: block !important;
+}
+.visible {
+  visibility: visible !important;
+}
+.active-color {
+  color: $main-color !important;
+}
+i.rotate {
+  transform: rotate(0deg) !important;
+}
+.scroll-to-up {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  bottom: 30px;
+  right: 10px;
+  i {
+    background-color: $alt-color;
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    width: fit-content;
+    border-radius: 5px;
+    transition: $main-transition;
+    &:hover {
+      background-color: $main-color;
+    }
+  }
+}
+/*  End Global Rules */

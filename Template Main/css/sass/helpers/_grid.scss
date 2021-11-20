@@ -1,0 +1,26 @@
+/*  Start Grid System */
+.container {
+  padding : {
+    left: 15px;
+    right: 15px;
+  }
+  margin : {
+    left: auto;
+    right: auto;
+  }
+  @media #{$minSmall} {
+    width: 750px;
+  }
+  @media #{$minMedium} {
+    width: 970px;
+  }
+  @media #{$minLarge} {
+    width: 1170px;
+  }
+}
+%container-drid-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+/*  End Grid System */

@@ -1,0 +1,48 @@
+/* Strat Headr*/
+.topbar {
+  width: 100%;
+  border-bottom: 1px solid $borde-color;
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  .container {
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+
+    i {
+      padding-right: 10px;
+      color: $main-color;
+    }
+    .connect {
+      @media (max-width: 992px) {
+        width: 80%;
+        padding-bottom: 10px;
+      }
+      display: flex;
+      width: 50%;
+      justify-content: space-evenly;
+      li:first-of-type {
+        padding-right: 10px;
+        border-right: 1px solid $borde-color;
+      }
+    }
+    .info {
+      @media (max-width: 992px) {
+        width: 90%;
+      }
+      display: flex;
+      width: 45%;
+      justify-content: space-evenly;
+      li:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid $borde-color;
+      }
+    }
+  }
+}
+/* End Headr*/
